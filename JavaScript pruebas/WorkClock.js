@@ -1,5 +1,7 @@
-var alarm = 0;
+(function(){
 
-var showcurrenttime = function() {
-
-}
+    
+   
+    
+    
+});

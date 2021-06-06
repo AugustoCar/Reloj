@@ -82,7 +82,7 @@ body {
 .mn:before {
     content: '';
     position: fixed;
-    width: 9px;
+    width: 4px;
     height: 90px;
     background: #fff;
     z-index: 11;
