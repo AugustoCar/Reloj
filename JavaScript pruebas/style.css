@@ -101,3 +101,34 @@ body {
     z-index: 11;
     border-radius: 6px 6px 0 0;
 }
+
+h2 { 
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 3em;
+    color: #fff; 
+}
+
+#alarmContainer{
+    text-align:center;
+    font-family: Verdana;
+    font-size: 0.6em;
+    padding: 0.7em;
+    color: white;
+    margin-bottom: 100px;
+}
+
+#setButton {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.75em;
+    float:left;
+    background-color:lightgreen;
+    margin-top:10px;
+}
+
+#clearButton {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.75em;
+    float:right;
+    background-color:red;
+    margin-top:10px;
+}
