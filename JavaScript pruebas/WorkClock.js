@@ -1,12 +1,12 @@
 //sound of the alarm
-var sound = new Audio("https://www.youtube.com/watch?v=8xz9s_-sO1I&ab_channel=CriticalRoleCriticalRoleVerificada");
+var sound = new Audio("https://www.freespecialeffects.co.uk/soundfx/animals/duck1.wav");
 sound.loop = true;
 
 //setting the time of the clock with the computer 
 var hr = document.getElementById('hr');
-var min = document.getElementById('min');
-var sec = document.getElementById('sec');
-
+var mn = document.getElementById('mn');
+var sc = document.getElementById('sc');
+//var clearButton = document.getElementById('clearButton');
 
 function initClock(){
 
@@ -75,10 +75,58 @@ function secsMenu(){
 
 }secsMenu();
 
+function alarmSet() {
+
+	var hr = document.getElementById('alarmHr');
+	
+	var min = document.getElementById('alarmMin');
+	
+	var sec = document.getElementById('alarmSec');
+	
+    
+
+    var selectedHour = hr.options[hr.selectedIndex].value;
+    var selectedMin = min.options[min.selectedIndex].value;
+    var selectedSec = sec.options[sec.selectedIndex].value;
+
+    var alarmTime = addZero(selectedHour) + ":" + addZero(selectedMin) + ":" + addZero(selectedSec);
+    console.log('alarmTime:' + alarmTime);
+
+    document.getElementById('alarmHr').disabled = true;
+	document.getElementById('alarmMin').disabled = true;
+	document.getElementById('alarmSec').disabled = true;
+
+
+//when alarmtime is equal to currenttime then play a sound
+	var clock = document.getElementById('clock');
+
+    
+//function to compare current time to the alarm
+setInterval(function(){
+
+    var date = new Date();
+
+    var hour = date.getHours();
+
+    var minutes = date.getMinutes();
+    
+    var seconds = date.getSeconds();
+
+    var currentTime = addZero(hour) + ":" + addZero(minutes) + ":" + addZero(seconds) + "";
+	
+
+	if (alarmTime == currentTime) {
+		
+        sound.play();		
+    }
+
+},1000);
+
 function alarmClear() {
 
 	document.getElementById('alarmHr').disabled = false;
 	document.getElementById('alarmMin').disabled = false;
 	document.getElementById('alarmSec').disabled = false;
 	sound.pause();
+}
 }
