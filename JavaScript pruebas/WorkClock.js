@@ -40,7 +40,7 @@ function hoursMenu(){
  var select = document.getElementById('alarmHr');
 
 
- var hrs = 12;
+ var hrs = 24;
 
  for(i = 1; i <= hrs; i++){
 
