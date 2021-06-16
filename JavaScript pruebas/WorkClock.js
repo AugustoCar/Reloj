@@ -128,5 +128,5 @@ function alarmClear() {
 	document.getElementById('alarmMin').disabled = false;
 	document.getElementById('alarmSec').disabled = false;
 	sound.pause();
-}
+}alarmClear();
 }
